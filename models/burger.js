@@ -1,7 +1,7 @@
 //export burger model as sequelized object
 module.exports = (sequelize, DataTypes) => {
     //create a data table called "burger"
-    let Burger = sequelize.define("burger", {
+    var Burger = sequelize.define("Burger", {
         //the following fields located in the table
         burger_name: {
             type: DataTypes.STRING, 
