@@ -1,0 +1,35 @@
+
+body {
+    background-color: black;
+}
+.leftscreen {
+    float: left;
+    width: 50%;
+    height: 96vh;
+}
+.rightscreen {
+    float: right;
+    width: 50%;
+    height: 96vh;
+}
+.burger-devoured {
+    overflow: auto;
+    width:95%;
+    height: 600px;
+    background-color: green;
+}
+.burger-ready {
+    overflow: auto;
+    width:95%;
+    height: 300px;
+    background-color: red;
+}
+.burger-orderPlaced {
+    overflow: auto;
+    width: 95%;
+    height: 300px;
+    background-color: blue;
+}
+.burger-orderHere {
+    
+}

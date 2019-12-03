@@ -17,7 +17,7 @@ module.exports = app => {
         db.Comments.create(
             req.body, {
                 where: {
-                    burger_name: req.body.burger_name
+                    id: req.body.id
                 }
             }).then (dbComments => {
                 res.json(dbComments);
@@ -28,7 +28,7 @@ module.exports = app => {
         //edit a comment for burger by name
         db.Comments.update(
             req.body, {
-                where: { burger_name: req.body.burger_name}
+                where: { id: req.body.id}
             }).then(dbComments => {
                 res.json(dbComments);
             });
