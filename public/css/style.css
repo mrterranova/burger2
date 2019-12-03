@@ -12,24 +12,57 @@ body {
     width: 50%;
     height: 96vh;
 }
+.bottomscreen {
+    background-color: yellow;
+    width: 50%;
+}
 .burger-devoured {
     overflow: auto;
     width:95%;
     height: 600px;
     background-color: green;
+    margin: 5px 5px 5px 30px;
 }
 .burger-ready {
     overflow: auto;
     width:95%;
-    height: 300px;
+    height: 315px;
+    margin: 5px;
     background-color: red;
 }
 .burger-orderPlaced {
     overflow: auto;
     width: 95%;
-    height: 300px;
+    height: 280px;
+    margin: 5px;
     background-color: blue;
 }
-.burger-orderHere {
-    
+.orderHere {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    margin-top: 76vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.burgerOrderButton {
+    margin: 5px 0 5px 35px;
+    padding: 5px;
+}
+p {
+    font-size: 11px;
+}
+#burger-name {
+    background-color: white;
+}
+#devoured-button {
+    background-color: white;
+}
+#editBurger-button {
+    background-color: white;
+}
+#deleteBurger-button {
+    background-color: white;
 }
