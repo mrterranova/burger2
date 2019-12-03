@@ -15,25 +15,30 @@
 
 <body>
     <div class="leftscreen">
-        <div class="burger-devoured"></div>
+        <div class="burger-devoured">
+            <h3 class="nameBurger">Burger Name</h3>
+            <img class="imageBurger" src="http://www.burgerweb.com/wp-content/uploads/2015/06/water-color-burger.png" alt="">
+            <div class="starsBurger"></div>
+        </div>
     </div>
     <div class="rightscreen">
         <div class="burger-ready">
-            
+
         </div>
-        <div class="burger-orderPlaced"></div>
+        <div class="burger-orderPlaced">
+            <form class="form-comment">
+                Customer Name: <input class= "field" type="text" name="customer" max="30">
+                <br><br>
+                How many stars was your burger? <input class="field" type="number" name="stars" max="4" min="0">
+                <br><br>
+                Comments for other customers: <textarea class="field" name="comment"></textarea>
+
+                <input class="commentButton" type="submit" value="Submit">
+            </form>
+        </div>
     </div>
-    <div class="orderHere">
-        <div class="bottomscreen">
-        <h6>ORDER YOUR PERSONALIZED BURGER HERE:</h6>
-        <p>Remember that we only serve burgers at the shop. Any order no matter how creative it is will return in burger form.</p>
-        <form class="form-burger">
-            Create A New Burger: <input type="text" name="burger_name"><br>
-            <input class="burgerOrderButton" type="submit" value="Submit">
-        </form>
-    </div>
-</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
     <script src="./js/comment.js" type="text/javascript"></script>
 </body>
+
 </html>
