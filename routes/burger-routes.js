@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = app => {
     app.get("/api/burgers", (req,res) => {
         db.Burger.findAll({
-            include: [dbComments]
+            include: [db.Comments]
         }).then (dbBurger => {
             res.json(dbBurger);
         });
@@ -16,7 +16,7 @@ module.exports = app => {
             where: {
                 id: req.params.id
             }, 
-            include: [dbComments]
+            include: [db.Comments]
         }). then (dbBurger => {
             res.json(dbBurger);
         });
@@ -29,12 +29,14 @@ module.exports = app => {
     });
 
     app.put("/api/burgers", (req, res) => {
+        console.log(req.params.id)
         db.Burger.update(req.body, {
             where: {
                 id: req.params.id
             }
         }).then(dbBurger => {
             res.json(dbBurger);
+            console.log(dbBurger)
         });
     });
 };
