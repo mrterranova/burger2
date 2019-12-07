@@ -4,7 +4,7 @@ var db = require("../models");
 //export routs into app
 module.exports = app => {
     //read all comments associated with Burger name
-    app.get("/api/comments", (req, res) => {
+    app.get("/api/comments/:burger_id", (req, res) => {
         var query = {};
         if(req.query.burger_id) {
             query.BurgerId = req.query.burger_id;

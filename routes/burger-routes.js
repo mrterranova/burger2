@@ -29,14 +29,12 @@ module.exports = app => {
     });
 
     app.put("/api/burgers", (req, res) => {
-        console.log(req.params.id)
         db.Burger.update(req.body, {
             where: {
                 id: req.params.id
             }
         }).then(dbBurger => {
             res.json(dbBurger);
-            console.log(dbBurger)
         });
     });
 };

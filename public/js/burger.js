@@ -11,7 +11,7 @@ $(document).ready(function () {
                 if (data[i].devoured) {
                     if (data[i].deleted == false) {
                         eatenBurgers += "<div class = 'rowEatenBurgers'>" + data[i].burger_name + "<div class='rowButtons'><button id='deleteBurger-button'>Delete Burger</button>" +
-                            "<a href='./comment.html'><button id='comment-button'>Comments</button></a></div></div><br>";
+                            "<a href='./comments?burger_id='"+data[i].id+"><button id='comment-button'>Comments</button></a></div></div><br>";
                     }
                 }
             }
@@ -31,7 +31,7 @@ $(document).ready(function () {
             }
             $(".burger-orderPlaced").prepend(prepareBurger);
 
-            $("#burgerOrderButton").on("click", function (newBurger) {
+            $("#burgerOrderButton").on("click", newBurger => {
                 burgerName = $(".field").val().trim();
                 console.log(burgerName)
                 var allCap = burgerName.toUpperCase();
@@ -83,14 +83,15 @@ $(document).ready(function () {
     }
 
     // function editBurger(burger) {
-    $("#")
+    $(this).on("click", "#editBurger-button", burger => {
+        alert("I pushed the edit button");
+        console.log("this", burger)
         $.ajax({
             method: "PUT",
-            url: "/api/burgers"
-        }).then(data, function(){
-            console.log("data", data)
-            console.log("burger", burger)
-        });
-
+            url: "/api/burgers",
+            devoured: 1
+        }).then(
+        );
+    });
     // }
 });
