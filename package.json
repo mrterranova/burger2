@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/mrterranova/burger2#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mysql": "^2.17.1",
     "mysql2": "^2.0.1",
     "path": "^0.12.7",
